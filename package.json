@@ -1,0 +1,25 @@
+{
+  "name": "api-key-management",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "DevChiJay",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.13.2",
+    "nodemailer": "^6.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
