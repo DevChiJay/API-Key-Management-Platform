@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const UsageLog = require('../models/UsageLog');
 const logger = require('../utils/logger');
 
