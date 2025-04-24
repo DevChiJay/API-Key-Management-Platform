@@ -51,6 +51,39 @@ const ApiCatalogSchema = new mongoose.Schema({
       default: 60 * 60 * 1000 // 1 hour in milliseconds
     }
   },
+  gatewayConfig: {
+    requiresAuth: {
+      type: Boolean,
+      default: true
+    },
+    rateLimit: {
+      windowMs: {
+        type: Number,
+        default: 60 * 60 * 1000 // 1 hour in milliseconds
+      },
+      max: {
+        type: Number,
+        default: 100
+      }
+    },
+    headers: {
+      type: Map,
+      of: String,
+      default: {}
+    },
+    transformRequest: {
+      type: String,
+      default: null
+    },
+    transformResponse: {
+      type: String,
+      default: null
+    },
+    errorHandling: {
+      type: Object,
+      default: {}
+    }
+  },
   isActive: {
     type: Boolean,
     default: true

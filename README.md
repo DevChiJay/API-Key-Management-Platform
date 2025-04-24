@@ -48,6 +48,63 @@ The application follows a modular architecture with:
 
 4. Update the `.env` file with your MongoDB URI and Clerk credentials.
 
+## Database Configuration
+
+The platform uses MongoDB to store API configurations, API keys, and usage logs. The database schema includes:
+
+- **ApiCatalog**: Stores information about available APIs, their endpoints, and gateway configurations
+- **ApiKey**: Stores user API keys with permissions and rate limits
+- **UsageLog**: Tracks API usage and performance metrics
+
+### Initial API Setup
+
+The platform comes with a migration script to set up initial API configurations:
+
+1. Edit the API configurations in `src/scripts/migrateApiConfig.js` to include your desired APIs
+2. Run the migration script:
+   ```
+   node src/scripts/migrateApiConfig.js
+   ```
+
+This script will create or update API configurations in the database based on the static configurations defined in the file. By default, it includes:
+
+- GitHub API
+- OpenWeather API
+
+You can modify the script to add more APIs or update the existing configurations.
+
+### API Configuration Structure
+
+Each API configuration includes:
+- Basic information (name, slug, description)
+- Base URL for proxying requests
+- Endpoint documentation
+- Authentication type
+- Gateway configuration (rate limits, headers, etc.)
+
+Example configuration:
+```javascript
+{
+  name: 'GitHub API',
+  slug: 'github',
+  description: 'GitHub REST API for accessing GitHub resources',
+  baseUrl: 'https://api.github.com',
+  endpoints: [
+    { path: '/users/:username', method: 'GET', description: 'Get a user' },
+    // more endpoints...
+  ],
+  documentation: 'https://docs.github.com/en/rest',
+  authType: 'apiKey',
+  gatewayConfig: {
+    requiresAuth: true,
+    rateLimit: {
+      windowMs: 15 * 60 * 1000, // 15 minutes
+      max: 100 // limit each IP to 100 requests per windowMs
+    }
+  }
+}
+```
+
 ## Running the Application
 
 1. Start the server in development mode:
