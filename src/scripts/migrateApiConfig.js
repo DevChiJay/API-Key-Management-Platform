@@ -10,6 +10,25 @@ const logger = require('../utils/logger');
 
 // Static API configurations to migrate
 const staticApis = {
+  devchisolutions: {
+    name: 'DevChi API',
+    slug: 'devchi',
+    description: 'DevChi REST API for accessing DevChiSolutions resources',
+    baseUrl: 'https://api.devchihub.com',
+    endpoints: [
+      { path: '/humor', method: 'GET', description: 'Get a humor routes' },
+      { path: '/humor', method: 'POST', description: 'POST to humor routes' }
+    ],
+    documentation: 'https://docs.devchihub.com', // Updated documentation link
+    authType: 'apiKey',
+    gatewayConfig: {
+      requiresAuth: true,
+      rateLimit: {
+        windowMs: 2 * 60 * 1000, // 2 minutes
+        max: 5 // limit each IP to 5 requests per windowMs
+      }
+    }
+  },
   github: {
     name: 'GitHub API',
     slug: 'github',

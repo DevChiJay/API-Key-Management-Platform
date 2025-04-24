@@ -11,6 +11,6 @@ router.use(validateApiKey);
 router.use(dynamicRateLimiter);
 
 // Route requests to specific APIs
-router.use('/:apiName/*', gatewayController.routeApiRequest);
+router.use('/:apiName/:path', gatewayController.routeApiRequest);
 
 module.exports = router;

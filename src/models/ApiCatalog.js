@@ -10,7 +10,8 @@ const ApiCatalogSchema = new mongoose.Schema({
     type: String,
     required: true,
     unique: true,
-    lowercase: true
+    lowercase: true,
+    index: true
   },
   description: {
     type: String,
@@ -97,7 +98,5 @@ const ApiCatalogSchema = new mongoose.Schema({
     default: Date.now
   }
 });
-
-ApiCatalogSchema.index({ slug: 1 });
 
 module.exports = mongoose.model('ApiCatalog', ApiCatalogSchema);

@@ -1,0 +1,121 @@
+GET http://localhost:5000/api/apis
+
+###
+GET http://localhost:5000/api/keys
+
+###
+POST http://localhost:5000/api/keys
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MGExYjFmNjJiMDY3ZjNiMDYwZjlkNSIsInVzZXJuYW1lIjoidGVzdHVzZXIiLCJyb2xlIjoidXNlciIsImlhdCI6MTc0NTQ5Mjc2NywiZXhwIjoxNzQ1NDk5OTY3fQ.KIgtmmr00AREpyjBaxlQP3Y6Hhap3uICO17nyClOtUU
+
+{
+  "apiId": "6809eede33372f4c8ba80f26",
+  "name": "High Volume API Key",
+  "permissions": ["read", "write", "admin"],
+  "rateLimit": {
+    "requests": 4,
+    "per": 60000
+  },
+  "expiresAt": "2025-04-30T23:59:59.999Z"
+}
+
+### User and Auth Routes ###
+
+### Register a new user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+### Login user
+# @name login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@example.com",
+  "password": "password123"
+}
+
+### Save auth token from login response
+@authToken = {{login.response.body.token}}
+
+### Get current user profile (requires authentication)
+GET http://localhost:5000/api/auth/me
+Authorization: Bearer {{authToken}}
+
+### Register an admin user
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "username": "adminuser",
+  "email": "admin@example.com",
+  "password": "adminpass123"
+}
+
+### Login as admin
+# @name adminLogin
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "adminpass123"
+}
+
+### Save admin auth token
+@adminToken = {{adminLogin.response.body.token}}
+
+### API Gateway Routes ###
+
+### Set API key variable for testing
+@apiKey = apk.03d8dc3350164117.m9v9hpca.7cd77895
+
+### Basic GET request through the gateway
+GET http://localhost:5000/gateway/weather
+X-API-KEY: {{apiKey}}
+
+###
+GET http://localhost:5000/gateway/devchi/humor/random
+X-API-KEY: {{apiKey}}
+
+### GET request with query parameters
+GET http://localhost:5000/gateway/weather-api/forecast?location=London&days=5
+X-API-KEY: {{apiKey}}
+
+### POST request through the gateway
+POST http://localhost:5000/gateway/data-api/items
+Content-Type: application/json
+X-API-KEY: {{apiKey}}
+
+{
+  "name": "Test Item",
+  "description": "This is a test item",
+  "category": "testing"
+}
+
+### PUT request through the gateway
+PUT http://localhost:5000/gateway/data-api/items/123
+Content-Type: application/json
+X-API-KEY: {{apiKey}}
+
+{
+  "name": "Updated Item",
+  "description": "This item has been updated",
+  "category": "testing"
+}
+
+### DELETE request through the gateway
+DELETE http://localhost:5000/gateway/data-api/items/123
+X-API-KEY: {{apiKey}}
+
+### Example with custom headers passed through
+GET http://localhost:5000/gateway/premium-api/data
+X-API-KEY: {{apiKey}}
+Accept: application/json
+Custom-Header: custom-value

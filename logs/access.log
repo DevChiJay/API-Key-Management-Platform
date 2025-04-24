@@ -1,0 +1,65 @@
+::1 - anonymous [24/Apr/2025:08:36:34 +0000] "GET /gateway/devchi/humor HTTP/1.1" 500 37 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 112.295 ms
+::1 - anonymous [24/Apr/2025:08:36:51 +0000] "GET /gateway/devchi/humor/ HTTP/1.1" 500 37 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 117.236 ms
+::1 - anonymous [24/Apr/2025:08:37:44 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 500 37 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 34.611 ms
+::1 - anonymous [24/Apr/2025:08:39:24 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 401 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1226.210 ms
+::1 - anonymous [24/Apr/2025:08:41:57 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 401 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1070.795 ms
+::1 - anonymous [24/Apr/2025:08:43:53 +0000] "GET /gateway HTTP/1.1" 401 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1045.298 ms
+::1 - anonymous [24/Apr/2025:08:44:01 +0000] "GET / HTTP/1.1" 401 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 743.479 ms
+::1 - anonymous [24/Apr/2025:08:44:45 +0000] "GET / HTTP/1.1" 200 87 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 6.171 ms
+::1 - anonymous [24/Apr/2025:08:44:51 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 0.744 ms
+::1 - anonymous [24/Apr/2025:08:47:18 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 0.401 ms
+::1 - anonymous [24/Apr/2025:08:47:35 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 5.477 ms
+::1 - anonymous [24/Apr/2025:08:48:43 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 4.130 ms
+::1 - anonymous [24/Apr/2025:08:48:43 +0000] "GET /favicon.ico HTTP/1.1" 404 62 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1.479 ms
+::1 - anonymous [24/Apr/2025:08:48:47 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 0.534 ms
+::1 - anonymous [24/Apr/2025:08:49:40 +0000] "GET /gateway/devch HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 0.315 ms
+::1 - anonymous [24/Apr/2025:08:49:45 +0000] "GET /gateway/devch HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 0.341 ms
+::1 - anonymous [24/Apr/2025:08:49:51 +0000] "GET /gateway HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 0.858 ms
+::1 - anonymous [24/Apr/2025:08:52:34 +0000] "GET /gateway HTTP/1.1" 404 58 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 5.870 ms
+::1 - anonymous [24/Apr/2025:08:52:45 +0000] "GET /gateway/devc/ HTTP/1.1" 404 64 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1.111 ms
+::1 - anonymous [24/Apr/2025:08:52:52 +0000] "GET /gateway/devchi/ HTTP/1.1" 404 66 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 0.805 ms
+::1 - anonymous [24/Apr/2025:08:53:06 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 500 78 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 47.938 ms
+::1 - anonymous [24/Apr/2025:08:55:41 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 200 17757 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 5387.436 ms
+::1 - anonymous [24/Apr/2025:08:56:10 +0000] "GET /gateway/devchi/humor/mr HTTP/1.1" 404 147 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 860.342 ms
+::1 - anonymous [24/Apr/2025:08:56:16 +0000] "GET /gateway/fd/humor/mr HTTP/1.1" 404 52 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 2.871 ms
+::1 - anonymous [24/Apr/2025:08:58:34 +0000] "GET /gateway/devchi/humor/all HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1207.979 ms
+::1 - anonymous [24/Apr/2025:09:01:45 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 61 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 4946.145 ms
+::1 - anonymous [24/Apr/2025:09:01:56 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 68 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1219.218 ms
+::1 - anonymous [24/Apr/2025:09:02:01 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 80 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1219.564 ms
+::1 - anonymous [24/Apr/2025:09:02:04 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 67 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1173.448 ms
+::1 - anonymous [24/Apr/2025:09:02:08 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 69 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1200.436 ms
+::1 - anonymous [24/Apr/2025:09:02:11 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 62 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 1404.543 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:09:09:42 +0000] "GET /api/apis HTTP/1.1" 200 559 "-" "vscode-restclient" - none - 20.268 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:09:10:30 +0000] "GET /api/keys HTTP/1.1" 500 52 "-" "vscode-restclient" - none - 9.157 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:09:11:40 +0000] "GET /api/keys HTTP/1.1" 500 73 "-" "vscode-restclient" - none - 6.633 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:09:21:51 +0000] "POST /api/keys HTTP/1.1" 500 72 "-" "vscode-restclient" - none - 57.711 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:06:07 +0000] "POST /api/auth/register HTTP/1.1" 201 354 "-" "vscode-restclient" - none - 175.636 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:08:18 +0000] "GET /api/auth/me HTTP/1.1" 200 124 "-" "vscode-restclient" - none - 24.292 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:10:00 +0000] "POST /api/keys HTTP/1.1" 401 84 "-" "vscode-restclient" - none - 2.016 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:10:45 +0000] "POST /api/keys HTTP/1.1" 201 318 "-" "vscode-restclient" - none - 37.943 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:11:42 +0000] "POST /api/keys HTTP/1.1" 500 72 "-" "vscode-restclient" - none - 13.496 ms
+::1 - anonymous [24/Apr/2025:11:23:12 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 7.583 ms
+::1 - anonymous [24/Apr/2025:11:26:42 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 401 52 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 17.153 ms
+::1 - anonymous [24/Apr/2025:11:26:57 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 500 75 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - apk.03d8... - 240.992 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:29:08 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 74 "-" "vscode-restclient" - apk.03d8... - 5510.540 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:29:32 +0000] "GET /gateway/weather-api/forecast?location=London&days=5 HTTP/1.1" 404 61 "-" "vscode-restclient" - apk.03d8... - 9.349 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:30:14 +0000] "GET /gateway/weather HTTP/1.1" 404 66 "-" "vscode-restclient" - apk.03d8... - 36.825 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:30:36 +0000] "GET /gateway/weather/ HTTP/1.1" 404 67 "-" "vscode-restclient" - apk.03d8... - 24.982 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:31:29 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 65 "-" "vscode-restclient" - apk.03d8... - 9542.051 ms
+::1 - anonymous [24/Apr/2025:11:31:37 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - 0.683 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:31:49 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 70 "-" "vscode-restclient" - apk.03d8... - 5498.799 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:31:55 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 88 "-" "vscode-restclient" - apk.03d8... - 1330.463 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:32:01 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 62 "-" "vscode-restclient" - apk.03d8... - 1325.606 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:32:04 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 72 "-" "vscode-restclient" - apk.03d8... - 1215.408 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:32:06 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 63 "-" "vscode-restclient" - apk.03d8... - 1201.450 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:11:32:08 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 68 "-" "vscode-restclient" - apk.03d8... - 1325.868 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:08:43 +0000] "POST /api/keys HTTP/1.1" 401 61 "-" "vscode-restclient" - none - 144.177 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:09:45 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 500 75 "-" "vscode-restclient" - apk.03d8... - 374.626 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:13:40 +0000] "GET /gateway/weather HTTP/1.1" 404 66 "-" "vscode-restclient" - apk.03d8... - 16.873 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:13:53 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 75 "-" "vscode-restclient" - apk.03d8... - 5339.303 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:15:23 +0000] "GET /gateway/weather HTTP/1.1" 404 66 "-" "vscode-restclient" - apk.03d8... - 23.142 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:15:31 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 69 "-" "vscode-restclient" - apk.03d8... - 1406.093 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:15:38 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 97 "-" "vscode-restclient" - apk.03d8... - 1398.037 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:15:45 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 70 "-" "vscode-restclient" - apk.03d8... - 2360.820 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:15:48 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 85 "-" "vscode-restclient" - apk.03d8... - 1373.607 ms
+::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:15:57 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 74 "-" "vscode-restclient" - apk.03d8... - 1557.665 ms

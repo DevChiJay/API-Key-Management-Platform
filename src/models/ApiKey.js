@@ -53,7 +53,4 @@ const ApiKeySchema = new mongoose.Schema({
   }
 });
 
-// Index for faster lookups by key
-ApiKeySchema.index({ key: 1 });
-
 module.exports = mongoose.model('ApiKey', ApiKeySchema);

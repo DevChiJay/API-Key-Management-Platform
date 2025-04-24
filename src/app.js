@@ -2,10 +2,10 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
-const { ClerkExpressWithAuth } = require('@clerk/clerk-sdk-node');
 const logger = require('./utils/logger');
 
 // Route imports
+const authRoutes = require('./routes/auth');
 const apiRoutes = require('./routes/apis');
 const keyRoutes = require('./routes/keys');
 const gatewayRoutes = require('./routes/gateway');
@@ -26,10 +26,8 @@ app.use(logger.httpLogger);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Initialize Clerk
-app.use(ClerkExpressWithAuth());
-
 // API routes
+app.use('/api/auth', authRoutes);
 app.use('/api/apis', apiRoutes);
 app.use('/api/keys', keyRoutes);
 app.use('/gateway', gatewayRoutes);
@@ -48,6 +46,11 @@ app.get('/api/docs', (req, res) => {
   res.json({
     title: 'API Key Management Platform Documentation',
     endpoints: {
+      auth: {
+        'POST /api/auth/register': 'Register a new user',
+        'POST /api/auth/login': 'Log in a user',
+        'GET /api/auth/me': 'Get current user profile (requires auth)'
+      },
       apis: {
         'GET /api/apis': 'Get all available APIs',
         'GET /api/apis/:idOrSlug': 'Get details for a specific API',
