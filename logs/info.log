@@ -1,0 +1,5 @@
+[INFO] 2025-04-24T17:35:11.955Z - Server running in development mode on port 5000
+[INFO] 2025-04-24T17:35:11.979Z - MongoDB Connected: localhost
+[INFO] 2025-04-24T17:35:30.072Z - Proxying request to devchi: GET /gateway/devchi/humor/random
+[INFO] 2025-04-24T17:35:58.206Z - Proxying request to devchi: GET /gateway/devchi/humor/random
+[INFO] 2025-04-24T17:36:01.660Z - Proxying request to devchi: GET /gateway/devchi/humor/random

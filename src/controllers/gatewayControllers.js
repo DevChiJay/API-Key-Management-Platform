@@ -26,6 +26,9 @@ exports.routeApiRequest = async (req, res, next) => {
         message: `This API key does not have access to '${apiName}'`
       });
     }
+    
+    // Log rate limit information for debugging
+    logger.debug(`Request to ${apiName} with key ${req.apiKey.key}. Rate limit: ${req.apiKey.rateLimit.requests} per ${req.apiKey.rateLimit.per}ms`);
 
     // Create and apply proxy for this API
     const apiProxy = createApiProxy(apiConfig);

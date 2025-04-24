@@ -50,6 +50,15 @@ const validateApiKey = async (req, res, next) => {
     // Update last used timestamp
     keyDoc.lastUsed = new Date();
     await keyDoc.save();
+    
+    // Ensure rate limit values are numbers
+    const rateLimit = {
+      requests: Number(keyDoc.rateLimit?.requests) || 100,
+      per: Number(keyDoc.rateLimit?.per) || 60 * 60 * 1000 // Default 1 hour
+    };
+    
+    // Log for debugging
+    logger.debug(`API key ${apiKey} validated. Rate limit: ${rateLimit.requests} requests per ${rateLimit.per}ms`);
 
     // Attach API key info to request for use in downstream middleware and controllers
     req.apiKey = {
@@ -59,7 +68,7 @@ const validateApiKey = async (req, res, next) => {
       apiId: keyDoc.apiId._id,
       api: keyDoc.apiId,
       permissions: keyDoc.permissions,
-      rateLimit: keyDoc.rateLimit
+      rateLimit: rateLimit
     };
 
     next();
