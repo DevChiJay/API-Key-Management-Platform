@@ -67,3 +67,70 @@
 ::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:35:59 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 67 "-" "vscode-restclient" - apk.03d8... - 3/60000ms - 1352.493 ms
 ::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:36:03 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 86 "-" "vscode-restclient" - apk.03d8... - 3/60000ms - 1458.410 ms
 ::ffff:127.0.0.1 - anonymous [24/Apr/2025:17:36:05 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 429 86 "-" "vscode-restclient" - apk.03d8... - 3/60000ms - 15.582 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:25:54 +0000] "GET /api/apis HTTP/1.1" 200 559 "-" "vscode-restclient" - none - none - 50.638 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:26:20 +0000] "GET /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 7.254 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:26:20 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 3.171 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:26:38 +0000] "GET /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1.345 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:26:38 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 1.565 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:26:59 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1342.845 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:28:27 +0000] "POST /api/auth/login HTTP/1.1" 200 97 "-" "vscode-restclient" - none - none - 2.450 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:31:04 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 944.674 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:35:52 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 74 "-" "vscode-restclient" - apk.03d8... - 3/60000ms - 5175.135 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:41:32 +0000] "GET /api/auth/me HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 5.251 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:41:32 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 7.638 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:41:44 +0000] "GET /api/auth/me HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1.071 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:41:44 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 0.995 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:42:07 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 2.234 ms
+::1 - anonymous [29/Apr/2025:18:43:40 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 2.701 ms
+::1 - anonymous [29/Apr/2025:18:43:40 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 2.202 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:18:43:41 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 947.248 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:43:57 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1.299 ms
+::1 - anonymous [29/Apr/2025:18:44:30 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 2.038 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:51:34 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1.848 ms
+::1 - anonymous [29/Apr/2025:18:52:54 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1.202 ms
+::1 - anonymous [29/Apr/2025:18:52:54 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1.210 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:18:52:55 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 690.369 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:55:11 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 927.236 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:55:54 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 890.117 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:18:56:58 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 971.810 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:05:12 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 971.896 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:47:30 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 200 69 "-" "vscode-restclient" - apk.03d8... - 3/60000ms - 5279.770 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:47:51 +0000] "GET /gateway/devchi/humor/random HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1254.089 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:47:52 +0000] "GET /favicon.ico HTTP/1.1" 404 62 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 4.725 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:49:28 +0000] "GET /gateway/apis/ HTTP/1.1" 401 56 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 2.506 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:50:06 +0000] "GET /api/apis HTTP/1.1" 200 559 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 10.612 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:50:15 +0000] "GET /api/auth/me HTTP/1.1" 200 136 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1146.765 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:50:33 +0000] "GET /api/auth/me HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1180.220 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:50:33 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 258.424 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:50:57 +0000] "GET /api/auth/me HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 994.314 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:50:57 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 307.857 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:51:24 +0000] "GET /api/auth/me HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1473.009 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:51:24 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 252.986 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:52:26 +0000] "GET /api/auth/me HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1390.158 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:52:26 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 639.591 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:52:39 +0000] "POST /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 854.821 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:53:08 +0000] "GET /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1.079 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:53:08 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 0.940 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:53:14 +0000] "GET /api/apis HTTP/1.1" 200 559 "-" "vscode-restclient" - none - none - 10.374 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:53:29 +0000] "GET /api/auth/me HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1020.209 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:53:30 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 750.523 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:53:43 +0000] "GET /api/auth/me HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 933.779 ms
+::1 - anonymous [29/Apr/2025:19:54:13 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 4.883 ms
+::1 - anonymous [29/Apr/2025:19:54:25 +0000] "GET /api/auth/me HTTP/1.1" 302 30 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 10.429 ms
+::1 - anonymous [29/Apr/2025:19:54:25 +0000] "GET / HTTP/1.1" 200 87 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 2.531 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:55:36 +0000] "GET /api/auth/me HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 1042.115 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:19:55:36 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 252.724 ms
+::1 - anonymous [29/Apr/2025:19:57:11 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1.777 ms
+::1 - anonymous [29/Apr/2025:19:57:11 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 2.224 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:57:11 +0000] "GET /api/usage/summary HTTP/1.1" 404 68 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 4.089 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:57:26 +0000] "GET /api/auth/me HTTP/1.1" 200 136 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1106.858 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:57:43 +0000] "GET /api/keys HTTP/1.1" 500 73 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 9.381 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:58:25 +0000] "GET /api/auth/me HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1549.072 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:59:21 +0000] "GET /api/auth/me HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1492.649 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:19:59:27 +0000] "GET /api/keys HTTP/1.1" 500 73 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 6.151 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:20:02:27 +0000] "GET /api/keys HTTP/1.1" 500 73 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1399.313 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:20:06:06 +0000] "GET /api/keys HTTP/1.1" 200 269 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 1641.892 ms
+::1 - user_2wMat7w7uhiNVL93uZwnmPTFb9W [29/Apr/2025:20:08:07 +0000] "GET /api/keys HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" - none - none - 2297.181 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:20:11:55 +0000] "GET /api/keys HTTP/1.1" 302 23 "-" "vscode-restclient" - none - none - 19.175 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:20:11:55 +0000] "GET / HTTP/1.1" 200 87 "-" "vscode-restclient" - none - none - 2.883 ms
+::ffff:127.0.0.1 - anonymous [29/Apr/2025:20:12:18 +0000] "GET /api/apis HTTP/1.1" 200 559 "-" "vscode-restclient" - none - none - 20.108 ms

@@ -11,10 +11,16 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
   },
-  "keywords": ["api", "management", "keys", "gateway"],
+  "keywords": [
+    "api",
+    "management",
+    "keys",
+    "gateway"
+  ],
   "author": "DevChiJay",
   "license": "ISC",
   "dependencies": {
+    "@clerk/express": "^1.4.9",
     "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",

@@ -1,126 +1,44 @@
-const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const { clerkClient, getAuth } = require('@clerk/express');
 const logger = require('../utils/logger');
 
-// Register a new user
+// Note: With Clerk, you don't need to implement register or login
+// These are handled by Clerk's frontend. These functions are kept
+// as placeholders for endpoints that might be needed for your application
+
+// A placeholder for register
 exports.register = async (req, res) => {
-  try {
-    const { username, email, password } = req.body;
-
-    // Check if user already exists
-    const existingUser = await User.findOne({ 
-      $or: [{ email }, { username }] 
-    });
-
-    if (existingUser) {
-      return res.status(400).json({
-        error: 'Bad Request',
-        message: 'User with this email or username already exists'
-      });
-    }
-
-    // Create new user
-    const user = new User({
-      username,
-      email,
-      password
-    });
-
-    await user.save();
-
-    // Generate JWT token
-    const token = jwt.sign(
-      { id: user._id, username: user.username, role: user.role },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRE }
-    );
-
-    logger.info(`New user registered: ${username}`);
-    
-    res.status(201).json({
-      success: true,
-      token,
-      user: {
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        role: user.role
-      }
-    });
-  } catch (error) {
-    logger.error('Registration error:', error);
-    res.status(500).json({
-      error: 'Internal Server Error',
-      message: 'Failed to register user'
-    });
-  }
+  // With Clerk, registration is handled by Clerk's frontend
+  // This endpoint could be used for additional custom logic
+  res.status(200).json({
+    success: true,
+    message: 'Registration is handled by Clerk. Please use the Clerk frontend components.'
+  });
 };
 
-// Login a user
+// A placeholder for login
 exports.login = async (req, res) => {
-  try {
-    const { email, password } = req.body;
-
-    // Validate inputs
-    if (!email || !password) {
-      return res.status(400).json({
-        error: 'Bad Request',
-        message: 'Email and password are required'
-      });
-    }
-
-    // Find user by email and include password for verification
-    const user = await User.findOne({ email }).select('+password');
-
-    if (!user) {
-      return res.status(401).json({
-        error: 'Unauthorized',
-        message: 'Invalid credentials'
-      });
-    }
-
-    // Verify password
-    const isMatch = await user.comparePassword(password);
-
-    if (!isMatch) {
-      return res.status(401).json({
-        error: 'Unauthorized',
-        message: 'Invalid credentials'
-      });
-    }
-
-    // Generate JWT token
-    const token = jwt.sign(
-      { id: user._id, username: user.username, role: user.role },
-      process.env.JWT_SECRET,
-      { expiresIn: process.env.JWT_EXPIRE }
-    );
-
-    logger.info(`User logged in: ${user.username}`);
-    
-    res.json({
-      success: true,
-      token,
-      user: {
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        role: user.role
-      }
-    });
-  } catch (error) {
-    logger.error('Login error:', error);
-    res.status(500).json({
-      error: 'Internal Server Error',
-      message: 'Failed to log in'
-    });
-  }
+  // With Clerk, login is handled by Clerk's frontend
+  // This endpoint could be used for additional custom logic
+  res.status(200).json({
+    success: true,
+    message: 'Login is handled by Clerk. Please use the Clerk frontend components.'
+  });
 };
 
 // Get current user profile
 exports.getCurrentUser = async (req, res) => {
   try {
-    const user = await User.findById(req.user.id);
+    const { userId } = getAuth(req);
+    
+    if (!userId) {
+      return res.status(401).json({
+        error: 'Unauthorized',
+        message: 'Not authenticated'
+      });
+    }
+    
+    // Get user from Clerk
+    const user = await clerkClient.users.getUser(userId);
     
     if (!user) {
       return res.status(404).json({
@@ -129,14 +47,18 @@ exports.getCurrentUser = async (req, res) => {
       });
     }
     
+    // Transform user data for your API response
+    const userData = {
+      id: user.id,
+      username: user.username || `${user.firstName} ${user.lastName}`.trim(),
+      email: user.emailAddresses[0]?.emailAddress,
+      // Get role from metadata or public metadata
+      role: user.publicMetadata?.role || 'user'
+    };
+    
     res.json({
       success: true,
-      user: {
-        id: user._id,
-        username: user.username,
-        email: user.email,
-        role: user.role
-      }
+      user: userData
     });
   } catch (error) {
     logger.error('Get current user error:', error);

@@ -1,6 +1,6 @@
 # API Key Management Platform
 
-A scalable API Key Management platform built with Node.js, Express, and MongoDB, featuring Clerk for authentication.
+A scalable API Key Management platform built with Node.js, Express, and MongoDB, featuring JWT for authentication.
 
 ## Features
 
@@ -8,15 +8,15 @@ A scalable API Key Management platform built with Node.js, Express, and MongoDB,
 - **Gateway Proxy**: Route requests to external APIs through a unified gateway
 - **Rate Limiting**: Control request rates per API key
 - **Usage Tracking**: Monitor API usage with detailed metrics
-- **Authentication**: Secure user authentication with Clerk
-- **MongoDB Integration**: Store and manage data related to keys, APIs, and usage logs
+- **Authentication**: Secure user authentication with JWT
+- **MongoDB Integration**: Store and manage data related to users, keys, APIs, and usage logs
 
 ## Architecture
 
 The application follows a modular architecture with:
 
-- **Models**: MongoDB schemas for API keys, API catalog, and usage logs
-- **Controllers**: Route handlers for API and key management
+- **Models**: MongoDB schemas for users, API keys, API catalog, and usage logs
+- **Controllers**: Route handlers for authentication, API, and key management
 - **Middleware**: Authentication, API key validation, rate limiting, and request proxying
 - **Services**: Business logic for key management, metrics, and policy enforcement
 - **Config**: Application and API configuration
@@ -26,7 +26,6 @@ The application follows a modular architecture with:
 
 - Node.js 14.x or higher
 - MongoDB 4.x or higher
-- [Clerk](https://clerk.dev/) account for authentication
 
 ## Installation
 
@@ -46,12 +45,13 @@ The application follows a modular architecture with:
    cp .env.example .env
    ```
 
-4. Update the `.env` file with your MongoDB URI and Clerk credentials.
+4. Update the `.env` file with your MongoDB URI and JWT secret.
 
 ## Database Configuration
 
 The platform uses MongoDB to store API configurations, API keys, and usage logs. The database schema includes:
 
+- **User**: Stores user accounts with authentication details and roles
 - **ApiCatalog**: Stores information about available APIs, their endpoints, and gateway configurations
 - **ApiKey**: Stores user API keys with permissions and rate limits
 - **UsageLog**: Tracks API usage and performance metrics
@@ -116,6 +116,12 @@ Example configuration:
 
 ## API Documentation
 
+### Authentication Endpoints
+
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login a user and receive JWT token
+- `GET /api/auth/me` - Get current user profile (requires authentication)
+
 ### API Catalog Endpoints
 
 - `GET /api/apis` - Get all available APIs
@@ -161,8 +167,8 @@ API usage is logged in the database and can be accessed through the metrics endp
 
 ## Security Considerations
 
+- JWT authentication with secure token handling
 - API keys are securely generated and stored
-- User authentication is handled by Clerk
 - Rate limiting helps prevent abuse
 - CORS and Helmet are configured for security
 - Input validation is performed on all endpoints

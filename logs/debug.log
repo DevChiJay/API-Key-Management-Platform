@@ -11,3 +11,11 @@
 [DEBUG] 2025-04-24T17:36:01.655Z - Request to devchi with key apk.03d8dc3350164117.m9v9hpca.7cd77895. Rate limit: 3 per 60000ms
 [DEBUG] 2025-04-24T17:36:05.020Z - API key apk.03d8dc3350164117.m9v9hpca.7cd77895 validated. Rate limit: 3 requests per 60000ms
 [DEBUG] 2025-04-24T17:36:05.020Z - API key apk.03d8dc3350164117.m9v9hpca.7cd77895 rate limit: 3 requests per 60000ms
+[DEBUG] 2025-04-29T18:35:47.204Z - API key apk.03d8dc3350164117.m9v9hpca.7cd77895 validated. Rate limit: 3 requests per 60000ms
+[DEBUG] 2025-04-29T18:35:47.205Z - API key apk.03d8dc3350164117.m9v9hpca.7cd77895 rate limit: 3 requests per 60000ms
+[DEBUG] 2025-04-29T18:35:47.206Z - Creating new rate limiter for key: apk.03d8dc3350164117.m9v9hpca.7cd77895
+[DEBUG] 2025-04-29T18:35:47.206Z - Creating new rate limit store with window: 60000ms, max: 3 requests
+[DEBUG] 2025-04-29T18:35:47.223Z - Request to devchi with key apk.03d8dc3350164117.m9v9hpca.7cd77895. Rate limit: 3 per 60000ms
+[DEBUG] 2025-04-29T19:47:25.651Z - API key apk.03d8dc3350164117.m9v9hpca.7cd77895 validated. Rate limit: 3 requests per 60000ms
+[DEBUG] 2025-04-29T19:47:25.652Z - API key apk.03d8dc3350164117.m9v9hpca.7cd77895 rate limit: 3 requests per 60000ms
+[DEBUG] 2025-04-29T19:47:25.656Z - Request to devchi with key apk.03d8dc3350164117.m9v9hpca.7cd77895. Rate limit: 3 per 60000ms

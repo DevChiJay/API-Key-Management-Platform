@@ -64,7 +64,7 @@ const validateApiKey = async (req, res, next) => {
     req.apiKey = {
       id: keyDoc._id,
       key: keyDoc.key,
-      userId: keyDoc.userId,
+      userId: keyDoc.userId, // This should be a Clerk user ID
       apiId: keyDoc.apiId._id,
       api: keyDoc.apiId,
       permissions: keyDoc.permissions,

@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const helmet = require('helmet');
+const { clerkMiddleware } = require('@clerk/express');
 const logger = require('./utils/logger');
 
 // Route imports
@@ -26,6 +27,9 @@ app.use(logger.httpLogger);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// Add Clerk middleware to all routes
+app.use(clerkMiddleware());
+
 // API routes
 app.use('/api/auth', authRoutes);
 app.use('/api/apis', apiRoutes);
@@ -47,8 +51,6 @@ app.get('/api/docs', (req, res) => {
     title: 'API Key Management Platform Documentation',
     endpoints: {
       auth: {
-        'POST /api/auth/register': 'Register a new user',
-        'POST /api/auth/login': 'Log in a user',
         'GET /api/auth/me': 'Get current user profile (requires auth)'
       },
       apis: {
