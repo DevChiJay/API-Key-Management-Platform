@@ -27,8 +27,15 @@ app.use(logger.httpLogger);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Add Clerk middleware to all routes
-app.use(clerkMiddleware());
+// Add Clerk middleware to all routes with API-friendly configuration
+app.use(clerkMiddleware({
+  // Disable redirection for API routes
+  apiRoutes: ['/api/*', '/gateway/*'],
+  // Return JSON errors instead of redirects for API routes
+  signInUrl: '/api/auth/unauthorized',
+  // Debug mode to see what's happening with auth
+  debug: process.env.NODE_ENV !== 'production'
+}));
 
 // API routes
 app.use('/api/auth', authRoutes);
