@@ -5,8 +5,8 @@ const logger = require('../utils/logger');
 // Get all keys for the authenticated user
 exports.getUserKeys = async (req, res) => {
   try {
-    const user = req.user;
-    const keys = await keyManagementService.getUserKeys(user.id);
+    const userId = req.userId;
+    const keys = await keyManagementService.getUserKeys(userId);
     
     // Filter out sensitive data from the response
     const keyList = keys.map(key => ({
@@ -33,8 +33,8 @@ exports.getUserKeys = async (req, res) => {
 // Get a specific key by ID
 exports.getKeyById = async (req, res) => {
   try {
-    const user = req.user;
-    const key = await keyManagementService.getKeyById(req.params.id, user.id);
+    const userId = req.userId;
+    const key = await keyManagementService.getKeyById(req.params.id, userId);
     
     res.json({
       id: key._id,
@@ -70,12 +70,12 @@ exports.generateKey = async (req, res) => {
       });
     }
     
-    const user = req.user;
+    const userId = req.userId;
     const keyData = { apiId, name, permissions, rateLimit, expiresAt };
     
-    const newKey = await keyManagementService.generateKey(user.id, keyData);
+    const newKey = await keyManagementService.generateKey(userId, keyData);
     
-    logger.info(`User ${user.id} created new API key for API ID ${apiId}`);
+    logger.info(`User ${userId} created new API key for API ID ${apiId}`);
     
     res.status(201).json({
       id: newKey._id,
@@ -100,12 +100,12 @@ exports.generateKey = async (req, res) => {
 // Revoke an API key
 exports.revokeKey = async (req, res) => {
   try {
-    const user = req.user;
+    const userId = req.userId;
     const keyId = req.params.id;
     
-    const revokedKey = await keyManagementService.revokeKey(keyId, user.id);
+    const revokedKey = await keyManagementService.revokeKey(keyId, userId);
     
-    logger.info(`User ${user.id} revoked API key ${keyId}`);
+    logger.info(`User ${userId} revoked API key ${keyId}`);
     
     res.json({
       id: revokedKey._id,
@@ -124,15 +124,15 @@ exports.revokeKey = async (req, res) => {
 // Update an API key
 exports.updateKey = async (req, res) => {
   try {
-    const user = req.user;
+    const userId = req.userId;
     const keyId = req.params.id;
     const { name, status, permissions, rateLimit, expiresAt } = req.body;
     
-    const updatedKey = await keyManagementService.updateKey(keyId, user.id, {
+    const updatedKey = await keyManagementService.updateKey(keyId, userId, {
       name, status, permissions, rateLimit, expiresAt
     });
     
-    logger.info(`User ${user.id} updated API key ${keyId}`);
+    logger.info(`User ${userId} updated API key ${keyId}`);
     
     res.json({
       id: updatedKey._id,
@@ -155,11 +155,11 @@ exports.updateKey = async (req, res) => {
 // Get usage metrics for a specific key
 exports.getKeyMetrics = async (req, res) => {
   try {
-    const user = req.user;
+    const userId = req.userId;
     const keyId = req.params.id;
     
     // Ensure the key belongs to this user
-    await keyManagementService.getKeyById(keyId, user.id);
+    await keyManagementService.getKeyById(keyId, userId);
     
     const { startDate, endDate } = req.query;
     const options = {};
@@ -172,7 +172,7 @@ exports.getKeyMetrics = async (req, res) => {
       options.endDate = new Date(endDate);
     }
     
-    const metrics = await metricsService.getKeyMetrics(keyId, user.id, options);
+    const metrics = await metricsService.getKeyMetrics(keyId, userId, options);
     
     res.json({ metrics });
   } catch (error) {

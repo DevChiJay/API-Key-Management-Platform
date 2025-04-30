@@ -28,14 +28,7 @@ exports.login = async (req, res) => {
 // Get current user profile
 exports.getCurrentUser = async (req, res) => {
   try {
-    const { userId } = getAuth(req);
-    
-    if (!userId) {
-      return res.status(401).json({
-        error: 'Unauthorized',
-        message: 'Not authenticated'
-      });
-    }
+    const userId = req.userId;
     
     // Get user from Clerk
     const user = await clerkClient.users.getUser(userId);

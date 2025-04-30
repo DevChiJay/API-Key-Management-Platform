@@ -2,7 +2,26 @@ const { requireAuth: clerkRequireAuth, getAuth } = require('@clerk/express');
 const logger = require('../utils/logger');
 
 // Middleware to handle Clerk authentication
-const requireAuth = clerkRequireAuth();
+const requireAuth = (req, res, next) => {
+  clerkRequireAuth()(req, res, () => {
+    const { userId } = getAuth(req);
+    
+    if (!userId) {
+      return res.status(401).json({
+        error: 'Unauthorized',
+        message: 'Authentication required to access this resource'
+      });
+    }
+    
+    // Add userId to req for easier access in controllers
+    req.userId = userId;
+    
+    // Also set user object for backward compatibility
+    req.user = { id: userId };
+    
+    next();
+  });
+};
 
 // Optional: Middleware for admin-only routes
 const requireAdmin = (req, res, next) => {
@@ -26,6 +45,12 @@ const requireAdmin = (req, res, next) => {
         message: 'Admin access required for this resource'
       });
     }
+    
+    // Add userId to req for easier access in controllers
+    req.userId = userId;
+    
+    // Also set user object for backward compatibility
+    req.user = { id: userId };
     
     next();
   });
