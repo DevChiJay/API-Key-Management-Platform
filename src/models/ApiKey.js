@@ -23,7 +23,7 @@ const ApiKeySchema = new mongoose.Schema({
   status: {
     type: String,
     enum: ['active', 'inactive', 'revoked'],
-    default: 'active'
+    default: 'inactive'
   },
   permissions: {
     type: [String],

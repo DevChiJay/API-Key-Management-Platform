@@ -1,3 +1,23 @@
 [ERROR] 2025-04-29T19:57:43.636Z - Error getting user keys:
 [ERROR] 2025-04-29T19:59:27.022Z - Error getting user keys:
 [ERROR] 2025-04-29T20:02:27.492Z - Error getting user keys:
+[ERROR] 2025-04-30T19:00:20.256Z - Error fetching API devchi: {"stringValue":"\"devchi\"","valueType":"string","kind":"ObjectId","value":"devchi","path":"_id","reason":{},"name":"CastError","message":"Cast to ObjectId failed for value \"devchi\" (type string) at path \"_id\" for model \"ApiCatalog\""}
+[ERROR] 2025-04-30T19:00:32.053Z - Error fetching API devchi: {"stringValue":"\"devchi\"","valueType":"string","kind":"ObjectId","value":"devchi","path":"_id","reason":{},"name":"CastError","message":"Cast to ObjectId failed for value \"devchi\" (type string) at path \"_id\" for model \"ApiCatalog\""}
+[ERROR] 2025-04-30T19:00:43.427Z - Error fetching API devchi: {"stringValue":"\"devchi\"","valueType":"string","kind":"ObjectId","value":"devchi","path":"_id","reason":{},"name":"CastError","message":"Cast to ObjectId failed for value \"devchi\" (type string) at path \"_id\" for model \"ApiCatalog\""}
+[ERROR] 2025-05-02T14:44:14.689Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:45:51.923Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:45:51.944Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:48:43.452Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:48:43.462Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:49:05.766Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:49:05.773Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:53:00.230Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:53:29.482Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T14:53:29.488Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T15:37:30.345Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T15:37:40.475Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T15:37:40.483Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T15:38:38.713Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T15:40:09.981Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T15:40:09.989Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}
+[ERROR] 2025-05-02T15:40:20.189Z - Unhandled error: {"expose":true,"statusCode":400,"status":400,"body":"null","type":"entity.parse.failed"}

@@ -30,14 +30,28 @@ exports.getApiByIdOrSlug = async (req, res) => {
   try {
     const { idOrSlug } = req.params;
     
-    // Try to find by ID first, then by slug
-    let api = await ApiCatalog.findOne({
-      $or: [
-        { _id: idOrSlug },
-        { slug: idOrSlug.toLowerCase() }
-      ],
-      isActive: true
-    });
+    // Check if the idOrSlug can be a valid MongoDB ObjectId
+    const isValidObjectId = /^[0-9a-fA-F]{24}$/.test(idOrSlug);
+    
+    let query;
+    if (isValidObjectId) {
+      // If it looks like an ObjectId, search by both id and slug
+      query = {
+        $or: [
+          { _id: idOrSlug },
+          { slug: idOrSlug.toLowerCase() }
+        ],
+        isActive: true
+      };
+    } else {
+      // If it's definitely not an ObjectId, just search by slug
+      query = {
+        slug: idOrSlug.toLowerCase(),
+        isActive: true
+      };
+    }
+    
+    let api = await ApiCatalog.findOne(query);
     
     if (!api) {
       return res.status(404).json({
