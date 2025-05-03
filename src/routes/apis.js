@@ -6,6 +6,9 @@ const { requireAuth, requireAdmin } = require('../middleware/auth');
 // Get all available APIs (public endpoint)
 router.get('/', apisController.getAllApis);
 
+// Get featured APIs (limited to first 6)
+router.get('/featured', apisController.getFeaturedApis);
+
 // Get a specific API by ID or slug
 router.get('/:idOrSlug', apisController.getApiByIdOrSlug);
 

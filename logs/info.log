@@ -41,3 +41,9 @@
 [INFO] 2025-05-02T17:24:58.881Z - User user_2wMat7w7uhiNVL93uZwnmPTFb9W created new API key for API ID 6814c54598197ea2123b4f46
 [INFO] 2025-05-02T17:26:28.801Z - Generated new API key for user user_2wMat7w7uhiNVL93uZwnmPTFb9W for API URL Shortener with QR
 [INFO] 2025-05-02T17:26:28.802Z - User user_2wMat7w7uhiNVL93uZwnmPTFb9W created new API key for API ID 6814c54598197ea2123b4f46
+[INFO] 2025-05-02T19:13:27.881Z - Server running in development mode on port 5000
+[INFO] 2025-05-02T19:13:27.904Z - MongoDB Connected: localhost
+[INFO] 2025-05-03T04:12:29.340Z - Server running in development mode on port 5000
+[INFO] 2025-05-03T04:12:29.387Z - MongoDB Connected: localhost
+[INFO] 2025-05-03T04:27:38.803Z - Server running in development mode on port 5000
+[INFO] 2025-05-03T04:27:38.823Z - MongoDB Connected: localhost

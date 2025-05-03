@@ -62,6 +62,7 @@ app.get('/api/docs', (req, res) => {
       },
       apis: {
         'GET /api/apis': 'Get all available APIs',
+        'GET /api/apis/featured': 'Get 6 featured APIs',
         'GET /api/apis/:idOrSlug': 'Get details for a specific API',
         'POST /api/apis': 'Add a new API (requires auth)',
         'PUT /api/apis/:id': 'Update an API (requires auth)',

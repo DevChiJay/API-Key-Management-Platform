@@ -25,6 +25,36 @@ exports.getAllApis = async (req, res) => {
   }
 };
 
+// Get featured APIs (limited to first 6)
+exports.getFeaturedApis = async (req, res) => {
+  try {
+    // Get active APIs and limit to the first 6 to showcase as featured
+    const featuredApis = await ApiCatalog.find({ isActive: true })
+      .sort({ updatedAt: -1 }) // Get the most recently updated APIs
+      .limit(6);
+    
+    // Return only public information for the featured APIs
+    const apiList = featuredApis.map(api => ({
+      id: api._id,
+      name: api.name,
+      slug: api.slug,
+      description: api.description,
+      documentation: api.documentation
+    }));
+    
+    res.json({ 
+      featured: apiList,
+      count: apiList.length
+    });
+  } catch (error) {
+    logger.error('Error fetching featured APIs:', error);
+    res.status(500).json({
+      error: 'Internal Server Error',
+      message: 'Failed to retrieve featured APIs'
+    });
+  }
+};
+
 // Get a specific API by ID or slug
 exports.getApiByIdOrSlug = async (req, res) => {
   try {
