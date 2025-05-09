@@ -30,7 +30,7 @@ exports.getFeaturedApis = async (req, res) => {
   try {
     // Get active APIs and limit to the first 6 to showcase as featured
     const featuredApis = await ApiCatalog.find({ isActive: true })
-      .sort({ updatedAt: -1 }) // Get the most recently updated APIs
+      .sort({ updatedAt: 1 }) // Get the most recently updated APIs
       .limit(6);
     
     // Return only public information for the featured APIs

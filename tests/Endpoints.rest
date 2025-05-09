@@ -12,33 +12,23 @@ GET http://localhost:5000/gateway/weather-api/forecast?location=London&days=5
 X-API-KEY: {{apiKey}}
 
 ### POST request through the gateway
-POST http://localhost:5000/gateway/data-api/items
+POST https://app.devchihub.com/gateway/url-shortener/api/shorten
 Content-Type: application/json
-X-API-KEY: {{apiKey}}
+X-API-KEY: apk.df949d6bd7a54231.mab9utg5.d5702eb5
 
 {
-  "name": "Test Item",
-  "description": "This is a test item",
-  "category": "testing"
+  "originalUrl": "https://portal.devchihub.com/docs/url-shortener"
 }
 
 ### PUT request through the gateway
-PUT http://localhost:5000/gateway/data-api/items/123
+POST https://app.devchihub.com/gateway/contact-us/contact-us
 Content-Type: application/json
-X-API-KEY: {{apiKey}}
 
 {
-  "name": "Updated Item",
-  "description": "This item has been updated",
-  "category": "testing"
+  "fullName": "John Doe",
+  "email": "john@example.com",
+  "phone": "070123456789",
+  "subject": "Project Inquiry",
+  "message": "I'd like to discuss a potential project.",
+  "sendTo": "devchijay@gmail.com"
 }
-
-### DELETE request through the gateway
-DELETE http://localhost:5000/gateway/data-api/items/123
-X-API-KEY: {{apiKey}}
-
-### Example with custom headers passed through
-GET http://localhost:5000/gateway/premium-api/data
-X-API-KEY: {{apiKey}}
-Accept: application/json
-Custom-Header: custom-value
